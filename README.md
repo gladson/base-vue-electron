@@ -1,29 +1,78 @@
-# desktop_cli_electron_builder
+# APP BASE - ELECTRON VUE.JS
 
-## Project setup
+## Vue CLI 3 => [LINK](https://cli.vuejs.org)
+
+### Instalation
+
+```shell
+$ yarn global add @vue/cli
+$ yarn global add @vue/cli-init
 ```
-yarn install
+
+### Create project
+
+```shell
+vue create NOME_DO_PROJETO
+```
+
+## Vue CLI 3 plugin for Electron => [LINK](https://nklayman.github.io)
+
+#### Before you begin
+
+```shell
+$ yarn global add --production=true windows-build-tools
+```
+
+### Instalation
+
+```shell
+$ vue add electron-builder
+```
+
+## Project (Vue and Electron)
+
+### Project install (node_modules)
+
+```shell
+$ yarn install
 ```
 
 ### Compiles and hot-reloads for development
+
+#### For Vue:
+
+```shell
+$ yarn run serve
 ```
-yarn run serve
+
+#### For Vue and Electron:
+
+```shell
+$ yarn electron:serve
 ```
 
 ### Compiles and minifies for production
+
+#### For Vue:
+
+```shell
+$ yarn run build
 ```
-yarn run build
+
+#### For Vue and Electron:
+
+```shell
+$ yarn electron:build
 ```
 
 ### Run your tests
-```
-yarn run test
+
+```shell
+$ yarn run test
 ```
 
 ### Lints and fixes files
-```
-yarn run lint
-```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+```shell
+$ yarn run lint
+```
