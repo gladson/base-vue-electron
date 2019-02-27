@@ -76,3 +76,9 @@ $ yarn run test
 ```shell
 $ yarn run lint
 ```
+
+## Want to help me?
+
+Read the angular community guideline: [contributing][contributing]
+
+[contributing]: /CONTRIBUTING.md

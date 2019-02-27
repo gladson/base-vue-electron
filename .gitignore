@@ -138,3 +138,7 @@ $RECYCLE.BIN/
 # End of https://www.gitignore.io/api/node,linux,windows,visualstudiocode
 #Electron-builder output
 /dist_electron
+
+# Lock
+yarn.lock
+package-lock.json
