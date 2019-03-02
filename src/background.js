@@ -1,5 +1,5 @@
 'use strict'
-
+/*eslint no-console: ["error", { allow: ["warn", "error"] }] */
 import { app, protocol, BrowserWindow } from 'electron'
 import {
   createProtocol,
