@@ -5,6 +5,8 @@
 </template>
 
 <script>
+/*eslint no-console: ["error", { allow: ["warn", "error"] }] */
+/* eslint-disable no-undef */
 export default {
     name: "HereMap",
     data() {
@@ -46,7 +48,7 @@ export default {
                 pixelRatio: pixelRatio
             }
         );
-        let behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(this.map));
+        new H.mapevents.Behavior(new H.mapevents.MapEvents(this.map));
         this.ui = H.ui.UI.createDefault(this.map, defaultLayers);
     },
     methods: {
