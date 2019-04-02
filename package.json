@@ -3,22 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "author": "Gladson S Brito",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gladson/base-vue-electron.git"
-  },
-  "bugs": {
-    "url": "https://github.com/gladson/base-vue-electron/issues"
-  },
-  "homepage": "https://github.com/gladson/base-vue-electron#readme",
-  "main": "background.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "electron:serve": "vue-cli-service electron:serve",
     "electron:build": "vue-cli-service electron:build",
+    "electron:serve": "vue-cli-service electron:serve",
     "postinstall": "electron-builder install-app-deps",
     "postuninstall": "electron-builder install-app-deps"
   },
@@ -30,15 +20,17 @@
     "@vue/cli-plugin-babel": "^3.5.0",
     "@vue/cli-plugin-eslint": "^3.5.0",
     "@vue/cli-service": "^3.5.0",
+    "babel-eslint": "^10.0.1",
+    "bootstrap": "3",
     "electron": "^4.1.3",
     "eslint": "^5.8.0",
-    "babel-eslint": "^10.0.1",
-    "eslint-plugin-vue": "^5.0.0",
     "eslint-formatter-friendly": "^6.0.0",
-    "vue-template-compiler": "^2.5.21",
+    "eslint-plugin-vue": "^5.0.0",
     "husky": "^1.3.1",
+    "jquery": "^3.3.1",
     "lint-staged": "^8.1.5",
-    "vue-cli-plugin-electron-builder": "^1.0.2"
+    "vue-cli-plugin-electron-builder": "^1.0.2",
+    "vue-template-compiler": "^2.5.21"
   },
   "eslintConfig": {
     "root": true,
@@ -64,15 +56,25 @@
     "last 2 versions",
     "not ie <= 8"
   ],
+  "bugs": {
+    "url": "https://github.com/gladson/base-vue-electron/issues"
+  },
+  "homepage": "https://github.com/gladson/base-vue-electron#readme",
   "husky": {
     "pre-commit": "lint-staged",
     "pre-push": "npm run lint"
   },
+  "license": "MIT",
   "lint-staged": {
     "*.js": [
       "eslint --ext .js -f ./node_modules/eslint-formatter-friendly . --fix",
       "prettier --write",
       "git add"
     ]
+  },
+  "main": "background.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gladson/base-vue-electron.git"
   }
 }

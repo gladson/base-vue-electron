@@ -1,7 +1,10 @@
+const webpack = require('webpack')
+
 module.exports = {
     publicPath: process.env.NODE_ENV === "production" ? "./" : "/",
     lintOnSave: process.env.NODE_ENV !== 'production',
     productionSourceMap: true,
+
     devServer: {
         proxy: {
             '^/api': {
@@ -24,5 +27,16 @@ module.exports = {
             "Access-Control-Allow-Origin":"*"
         }
     },
+
     parallel: require("os").cpus().length > 2,
+    configureWebpack: {
+      plugins: [
+        new webpack.ProvidePlugin({
+          $: 'jquery',
+          jquery: 'jquery',
+          'window.jQuery': 'jquery',
+          jQuery: 'jquery'
+        })
+      ]
+    }
 }
